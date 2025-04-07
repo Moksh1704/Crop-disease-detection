@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Disease Detection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo and Name -->
+            <a class="navbar-brand" href="#">
+                <img src="images/plant.jpg" alt="FarmWise Logo">
+                <span>Farm<span class="underline">Wise</span></span>
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="farmingtips.html">Tips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Farmers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="farmerdiseasedetect.html">Disease Prediction</a>
+                            <a class="dropdown-item" href="cropselect.html">Crop Selection</a>
+                            <a class="dropdown-item" href="farmermarket.html">Market</a>
+                            <a class="dropdown-item" href="farmerproducts.html">Products</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Customers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="customerexplore.html">Explore</a>
+                            <a class="dropdown-item" href="customerlogin.html">Login</a>
+                            <a class="dropdown-item" href="customermarket.html">Market</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="customersupport.html">Support</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Search Icon -->
+                <a href="#" id="search-icon" class="ml-3">
+                    <i class="fas fa-search"></i>
+                </a>
+
+                <!-- Search Form -->
+                <div id="search-form">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Crop Disease Detection Section -->
+    <section class="container mt-5">
+        <h2 class="text-center mb-4">Crop Disease Prediction</h2>
+
+        <!-- Image Upload Form -->
+        <div class="text-center mb-4">
+            <form id="upload-form">
+                <label for="fileInput" class="btn btn-outline-success btn-lg">
+                    Upload or Drag Image
+                    <input type="file" id="fileInput" class="d-none" accept="image/*">
+                </label>
+                <div id="drag-and-drop" class="mt-2 border p-4" style="border-style: dashed;">
+                    Drag and Drop Image Here
+                </div>
+                <div id="processing-message" class="mt-3 text-success" style="display: none;">
+                    Processing image, please wait...
+                </div>
+            </form>
+        </div>
+
+        <!-- Diagnosis Result -->
+        <div id="diagnosis-result" class="alert alert-success mt-4" style="display: none;">
+            <h4>Disease Prediction Result:</h2>
+            <p><strong>Plant or Crop Host:</strong> <span id="plant_or_crop_host"></span></p>
+            <p><strong>Common Name:</strong> <span id="common_name"></span></p>
+            <p><strong>Scientific Name:</strong> <span id="scientific_name"></span></p>
+            <p><strong>Type:</strong> <span id="type"></span></p>
+            <p><strong>Symptoms:</strong> <span id="symptoms"></span></p>
+            <p><strong>Conditions Favoring Disease:</strong> <span id="conditions_favoring_disease"></span></p>
+            <p><strong>Prevention and Management:</strong> <span id="prevention_and_management"></span></p>
+        </div>
+
+        <!-- Error and Retry Options -->
+        <div id="error-message" class="alert alert-warning mt-4" style="display: none;">
+            <h4>Could not detect disease</h4>
+            <p>Please upload a clearer image or consult farmer forums for expert advice.</p>
+            <button class="btn btn-primary" onclick="retryUpload()">Retry</button>
+        </div>
+
+        <!-- Plant Selection Form -->
+        <div id="plant-selection" class="mt-5" style="display: none;">
+            <h4 class="text-center mb-4">Plant Details</h4>
+            <form id="plant-form">
+                <div class="form-group">
+                    <label for="plant-type">Select Plant</label>
+                    <select class="form-control" id="plant-type">
+                        <option value="">-- Select Plant --</option>
+                        <option value="wheat">Wheat</option>
+                        <option value="rice">Rice</option>
+                        <option value="corn">Corn</option>
+                        <option value="cotton">Cotton</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Enter Location</label>
+                    <input type="text" class="form-control" id="location" placeholder="Enter your location">
+                </div>
+                <div class="form-group">
+                    <label for="fertilizers-used">Previously Used Fertilizers (if any)</label>
+                    <input type="text" class="form-control" id="fertilizers-used" placeholder="Fertilizers used">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <!-- Alternative if Image Cannot Be Uploaded -->
+        <div id="alternative-options" class="mt-5">
+            <h4 class="text-center mb-4">Can't Upload Image? Provide Plant Details Below</h4>
+            <form id="alternative-form">
+                <div class="form-group">
+                    <label for="alt-plant-type">Select Plant</label>
+                    <select class="form-control" id="alt-plant-type">
+                        <option value="">-- Select Plant --</option>
+                        <option value="wheat">Wheat</option>
+                        <option value="rice">Rice</option>
+                        <option value="corn">Corn</option>
+                        <option value="cotton">Cotton</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="alt-location">Enter Location</label>
+                    <input type="text" class="form-control" id="alt-location" placeholder="Enter your location">
+                </div>
+                <div class="form-group">
+                    <label for="alt-fertilizers-used">Previously Used Fertilizers (if any)</label>
+                    <input type="text" class="form-control" id="alt-fertilizers-used" placeholder="Fertilizers used">
+                </div>
+                <button type="submit" class="btn btn-success">Submit Details</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Branding -->
+            <div class="footer-logo">
+                <!-- Logo and Name -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/plant.jpg" alt="FarmWise Logo">
+                    <span>Farm<span class="underline">Wise</span></span>
+                </a><br>
+                <p>Empowering Farmers with Technology</p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <div>
+                    <h3>For Farmers</h3>
+                    <ul>
+                        <li><a href="#">Disease Detection</a></li>
+                        <li><a href="#">Crop Selection</a></li>
+                        <li><a href="#">Markets</a></li>
+                        <li><a href="#">Products</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>For Customers</h3>
+                    <ul>
+                        <li><a href="#">Market</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <p>Email: support@farmwise.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: 123 FarmWise Lane, Agri City</p>
+            </div>
+
+            <!-- Footer Bottom: Terms & Copyright -->
+            <div class="footer-bottom">
+                <a href="#">Terms & Conditions</a> |
+                <a href="#">Privacy Policy</a>
+                <p>© 2024 FarmWise | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script/detect.js"></script>
+
+
+    <!-- Crop Disease Detection Script -->
+
+</body>
+
+</html>

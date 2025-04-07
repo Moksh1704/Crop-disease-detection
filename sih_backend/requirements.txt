@@ -1,0 +1,9 @@
+fastapi
+numpy
+pandas
+fastapi-cli
+pydantic
+torch
+matplotlib
+torchvision
+python-multipart

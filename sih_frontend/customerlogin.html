@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmWise</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo and Name -->
+            <a class="navbar-brand" href="#">
+                <img src="images/plant.jpg" alt="FarmWise Logo">
+                <span>Farm<span class="underline">Wise</span></span>
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="farmingtips.html">Tips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Farmers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">                            
+                            <a class="dropdown-item" href="cropselect.html">Crop Selection</a>
+                            <a class="dropdown-item" href="farmermarket.html">Market</a> 
+                            <a class="dropdown-item" href="farmerproducts.html">Products</a>                                                      
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Customers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="customerexplore.html">Explore</a>
+                            <a class="dropdown-item" href="customerlogin.html">Login</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="customersupport.html">Support</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Search Icon -->
+                <a href="#" id="search-icon" class="ml-3">
+                    <i class="fas fa-search"></i>
+                </a>
+
+                <!-- Search Form -->
+                <div id="search-form">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form id="loginForm" onsubmit="return validateForm()">
+        <div class="contanier-fuild border-bottom"
+            style="font-family:'Times New Roman', Times, serif;">
+            <h1> Login Form </h1>
+            <p>Good to see you again!</p>
+        </div>
+        <br>
+        <div class="box border-bottom" style="font-family: cursive;">
+            <p>Username</p>
+            <div class="input-group mb-3"
+                style="margin-left: 20px; width: 800px;">
+                <div class="col-md-6">
+                    <div class="input-group">
+                       
+                        <input type="text" class="form-control"
+                            placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1" id="username">
+                    </div>
+                </div>
+            </div>
+            <p>Password</p>
+
+            <div class="input-group mb-3"
+                style="margin-left: 20px; width: 800px;">
+                <div class="col-md-6">
+                <div class="input-group">
+                    
+                    <input type="text" class="form-control"
+                        placeholder="Password"
+                        aria-label="Input group example"
+                        aria-describedby="basic-addon1" id="password">
+                </div>
+                </div>
+            </div>
+            <div class="checkbox-link-container">
+                <p><input type="checkbox" name="remember-me"
+                        value="remember-me"> Remember Me</p>
+                <p class="text-end"><a href="forgotpass.html">Forgot Password?</a></p>
+            </div>
+            <br>
+        </div>
+        <br>
+
+        <input class="button" type="submit" value="Login" id="loginbutton">
+
+        <br>
+
+        <p class="para">------------------or login
+            using--------------------</p><br>
+        <div class="button-container">
+            <button type="button" class="btn btn-primary"
+                fdprocessedid="l7jw9">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-google"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"></path>
+                </svg>
+                GOOGLE
+            </button>
+
+            <button type="button" class="btn btn-primary"
+                fdprocessedid="ksjxk">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-facebook"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                </svg>
+                Facebook
+            </button>
+        </div>
+        <br>
+        <p style="font-family: cursive;">Don't have an account yet <a
+                href="customerregister.html">Sign up !</a></p>
+    </form>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to toggle search form
+        document.getElementById('search-icon').addEventListener('click', function() {
+            var searchForm = document.getElementById('search-form');
+            searchForm.style.display = searchForm.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+
+</body>
+</html>

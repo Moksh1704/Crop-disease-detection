@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmWise</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo and Name -->
+            <a class="navbar-brand" href="#">
+                <img src="images/plant.jpg" alt="FarmWise Logo">
+                <span>Farm<span class="underline">Wise</span></span>
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="farmingtips.html">Tips</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Farmers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">                            
+                            <a class="dropdown-item" href="cropselect.html">Crop Selection</a>
+                            <a class="dropdown-item" href="farmermarket.html">Market</a> 
+                            <a class="dropdown-item" href="farmerproducts.html">Products</a>                                                      
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Customers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="customerexplore.html">Explore</a>
+                            <a class="dropdown-item" href="customerlogin.html">Login</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="customersupport.html">Support</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Search Icon -->
+                <a href="#" id="search-icon" class="ml-3">
+                    <i class="fas fa-search"></i>
+                </a>
+
+                <!-- Search Form -->
+                <div id="search-form">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Select Your Location</h1>
+        <form id="location-form">
+            <div class="form-group">
+                <label for="location-input">Enter Location:</label>
+                <input type="text" id="location-input" name="location" placeholder="Enter your location" required>
+            </div>
+            <div class="form-group">
+                <label for="map-select">Or Select from Map:</label>
+                <!-- Placeholder for map integration -->
+                <div id="map-container">
+                    <p>Select a location from the map below:</p>
+                    <!-- You would replace this with an actual map integration -->
+                    <div id="map-placeholder">[Map Integration Here]</div>
+                </div>
+            </div>
+            <button type="submit">Get Crop Suggestions</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script/cart.js"></script>
+
+    <script>
+        // JavaScript to toggle search form
+        document.getElementById('search-icon').addEventListener('click', function() {
+            var searchForm = document.getElementById('search-form');
+            searchForm.style.display = searchForm.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+
+</body>
+</html>
+
