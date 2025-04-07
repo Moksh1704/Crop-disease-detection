@@ -1,0 +1,752 @@
+/* Header Styling */
+
+.navbar-brand {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4CAF50;
+    /* Green color for the brand name */
+    margin-right: 30px;
+    /* Add spacing between logo and navigation links */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4b5f4c;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #af6d4c;
+    font-weight: bold;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #f8f9fa;
+    /* Light background for dropdown */
+}
+
+.dropdown-item {
+    color: #555;
+    /* Text color for dropdown items */
+    padding: 10px 20px;
+    /* Add padding inside dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef;
+    /* Light gray background on hover */
+}
+
+.dropdown-divider {
+    border-color: #e9ecef;
+    /* Light border color for the divider */
+}
+
+/* Search Bar Styling */
+#search-icon {
+    display: flex;
+    align-items: center;
+    color: #5d646c;
+    cursor: pointer;
+    position: relative;
+}
+
+#search-form {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#search-icon.open+#search-form {
+    display: block;
+}
+
+.form-inline .form-control {
+    width: 160px;
+    margin-right: 15px;
+    /* Increased space between the search box and button */
+}
+
+.form-inline .btn-outline-success {
+    color: #505c50;
+    border-color: #303a31;
+    padding: 3px 10px;
+    font-size: 0.9rem;
+}
+
+.form-inline .btn-outline-success:hover {
+    background-color: #3e4c3e;
+    color: white;
+    border-color: #545c54;
+}
+
+
+/* Additional Spacing for Navbar Items */
+.nav-item {
+    margin-left: 15px;
+    /* Add margin to the left of each nav item */
+}
+
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+    width: 45px;
+    /* Adjusted size */
+    height: 45px;
+    /* Adjusted size */
+    border-radius: 75%;
+    /* Circular shape */
+    background-color: #3c8f3a;
+    /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+.navbar-brand span {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #333;
+    /* Darker color for text */
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: #4CAF50;
+    /* Green underline */
+}
+
+#navbarNav {
+    justify-content: flex-end;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p,
+span,
+a {
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    color: rgb(0, 0, 0);
+
+    border-radius: 5px;
+    padding: 20px;
+
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin: 50px auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+#loginbutton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginbutton:hover {
+    color: #0a3f0c;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.button-container button {
+    margin-right: 10px;
+}
+
+.para {
+    opacity: 50%;
+}
+
+.checkbox-link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.form-group .checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group .checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.required {
+    color: red;
+}
+
+#map-container {
+    margin-top: 20px;
+}
+
+#map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#crop-results {
+    margin-top: 20px;
+}
+
+.crop-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.crop-item h2 {
+    margin-top: 0;
+}
+
+.crop-item p {
+    margin: 5px 0;
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #131212;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product-card img.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card-content {
+    padding: 15px;
+}
+
+.product-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.product-card p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.buy-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.cart-item-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#checkout-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-button:hover {
+    background-color: #218838;
+}
+
+
+
+
+/* Hide the default file input */
+#imageInput {
+    display: none;
+}
+
+/* Custom button styling with gradient */
+.custom-file-upload {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #e6f2e6, #b3d0a0);
+    /* More pronounced gradient */
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #a0c488;
+    font-size: 18px;
+    color: #555;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.custom-file-upload img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    /* Initially hide the image */
+}
+
+/* Hover effect */
+.custom-file-upload:hover {
+    background: linear-gradient(135deg, #d0e4c5, #9fb98c);
+    /* Darker gradient on hover */
+}
+
+/* Style for the upload button */
+#uploadForm button {
+    display: block;
+    margin: 0 auto;
+    /* Center the button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a0c488;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for the upload button */
+#uploadForm button:hover {
+    background-color: #8faa70;
+}
+
+/* Styling for result */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+/* CSS */
+.phone-display-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .phone-display-image {
+    width: 200px; /* adjust the width to your liking */
+    height: auto;
+    margin-right: 20px; /* add some space between the image and text */
+  }
+  
+  .text-container {
+    flex: 1; /* take up the remaining space */
+  }
+
+.active {
+    font-weight: bold;
+    color: green;
+        
+}
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  
+  .image-section img, 
+  .app-section img {
+    width: 300px;
+   
+  }
+  .text-section {
+    width: 700px;
+    font-size: 1rem; /* Adjust the font size */
+    margin-bottom: 20px; /* Add spacing if needed */
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.image-section img {
+    width: 350px; /* Limit the image size */
+    margin: 0 auto; /* Center the image */
+}
+
+  .featurette-image {
+    max-width: 250px; /* Makes sure the image doesn't exceed its container's width */
+    height: 450px;    /* Maintains aspect ratio */
+    /* Optional: Set a specific width if you want the image to be a specific size */
+    width: 80%;      /* Adjust this percentage as needed */
+}
+
+.detect{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.features{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 20px;
+}
+.app-section img {
+    width: 300px;
+   
+  }
+  
+  /* General Footer Styles */
+  footer {
+      background-color: #f3f3f3;
+      padding: 40px 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #333;
+      align-items: center;
+  }
+
+  .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Logo and Branding */
+  /* Logo and Branding */
+.footer-logo {
+    text-align: center; /* Ensures all content is centered */
+    margin-bottom: 20px;
+}
+
+.footer-logo a {
+    display: inline-block; /* Makes the brand and image appear inline */
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.footer-logo img {
+    width: 50px; /* Adjust size as needed */
+    vertical-align: middle; /* Aligns the logo with the text */
+    margin-right: 10px; /* Space between logo and brand name */
+}
+
+.footer-logo .underline {
+    text-decoration: underline;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+  /* Social Media Icons */
+  .social-media {
+      margin-top: 10px;
+  }
+
+  .social-media a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+  }
+
+  /* Quick Links */
+  .footer-links {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 40px;
+  }
+
+  .footer-links div {
+      text-align: left;
+  }
+
+  .footer-links h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+  }
+
+  .footer-links ul {
+      list-style: none;
+      padding: 0;
+  }
+
+  .footer-links ul li {
+      margin-bottom: 5px;
+  }
+
+  .footer-links ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+  }
+
+  .footer-links ul li a:hover {
+      text-decoration: underline;
+  }
+
+  /* Contact Info */
+  .footer-contact {
+      margin-top: 40px;
+  }
+
+  .footer-contact p {
+      font-size: 14px;
+      color: #666;
+      margin: 5px 0;
+  }
+
+  /* Terms & Copyright */
+  .footer-bottom {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #999;
+  }
+
+  .footer-bottom a {
+      text-decoration: none;
+      color: #999;
+      margin: 0 10px;
+  }
+
+  .footer-bottom a:hover {
+      text-decoration: underline;
+  }

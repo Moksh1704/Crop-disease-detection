@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmWise</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo and Name -->
+            <a class="navbar-brand" href="#">
+                <img src="plant.jpg" alt="FarmWise Logo">
+                <span>Farm<span class="underline">Wise</span></span>
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Farmers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#install">Install App</a>                             
+                            <a class="dropdown-item" href="#crop-selection">Crop Selection</a>
+                            <a class="dropdown-item" href="#disease-diagnosis">Market</a> 
+                            <a class="dropdown-item" href="#disease-diagnosis">Products</a>                                                      
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Retailers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#crop-selection">Explore</a>
+                            <a class="dropdown-item" href="#disease-diagnosis">Login</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#support">Support</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Customers
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#crop-selection">Explore</a>
+                            <a class="dropdown-item" href="#disease-diagnosis">Login</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#support">Support</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Search Icon -->
+                <a href="#" id="search-icon" class="ml-3">
+                    <i class="fas fa-search"></i>
+                </a>
+
+                <!-- Search Form -->
+                <div id="search-form">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+        <div class="container">
+            <h1>Marketplace</h1>
+            
+            <!-- Product Listing Form -->
+            <div id="product-listing">
+                <h2>List Your Produce</h2>
+                <form id="listing-form">
+                    <div class="form-group">
+                        <label for="product-name">Product Name:</label>
+                        <input type="text" id="product-name" name="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Price:</label>
+                        <input type="number" id="product-price" name="product-price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-quantity">Quantity:</label>
+                        <input type="number" id="product-quantity" name="product-quantity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Description:</label>
+                        <textarea id="product-description" name="product-description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image">Product Image:</label>
+                        <input type="file" id="product-image" name="product-image" accept="image/*">
+                    </div>
+                    <button type="submit">List Product</button>
+                </form>
+            </div>
+            
+            <!-- Product Listings -->
+            <div id="product-results">
+                <h2>Available Produce</h2>
+                <!-- Product items will be displayed here -->
+            </div>
+        </div>
+        <script src="market.js"></script>
+    </body>
+    </html>
+    

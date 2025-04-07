@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image for Disease Prediction</title>
+</head>
+<body>
+    <h1>Upload an Image for Disease Prediction</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept="image/*" required>
+        <button type="submit">Upload and Predict</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        const uploadForm = document.getElementById("uploadForm");
+
+        uploadForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const fileInput = document.getElementById("fileInput");
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Please select a file first.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("file", file);
+
+            try {
+                const response = await fetch("http://localhost:8000/upload-image/", {
+                    method: "POST",
+                    body: formData,
+                });
+                console.log(response)
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log(result)
+                    displayResult(result);
+                } else {
+                    console.log("I am here")
+                    alert("Error: " + response.statusText);
+                }
+            } catch (error) {
+                console.error("Error uploading the file:", error);
+                alert("There was an error uploading the image.");
+            }
+        });
+
+        function displayResult(result) {
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `
+                <h2>Disease Prediction Result:</h2>
+                <p><strong>Plant or Crop Host:</strong> ${result.plant_or_crop_host}</p>
+                <p><strong>Common Name:</strong> ${result.common_name}</p>
+                <p><strong>Scientific Name:</strong> ${result.scientific_name}</p>
+                <p><strong>Type:</strong> ${result.type}</p>
+                <p><strong>Symptoms:</strong> ${result.symptoms}</p>
+                <p><strong>Conditions Favoring Disease:</strong> ${result.conditions_favoring_disease}</p>
+                <p><strong>Prevention and Management:</strong> ${result.prevention_and_management}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

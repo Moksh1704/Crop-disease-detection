@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support - FarmWise</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/plant.jpg" alt="FarmWise Logo">
+                <span>Farm<span class="underline">Wise</span></span>
+            </a>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <!-- Add other links as needed -->
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Customer Support</h1>
+        
+        <!-- Contact Information -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Contact Us</h2>
+                <p>Email: support@farmwise.com</p>
+                <p>Phone: 1-800-123-4567</p>
+                <!-- Live Chat link can be added here -->
+            </div>
+
+            <!-- Support Form -->
+            <div class="col-md-6">
+                <h2>Submit a Request</h2>
+                <form action="submit-request.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- FAQs Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Frequently Asked Questions</h2>
+                <ul>
+                    <li><a href="#faq1">How do I reset my password?</a></li>
+                    <li><a href="#faq2">Where can I find the user guide?</a></li>
+                    <!-- Add more FAQs as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Support Resources -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Support Resources</h2>
+                <p><a href="user-guide.html">User Guide</a></p>
+                <p><a href="video-tutorials.html">Video Tutorials</a></p>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Feedback</h2>
+                <p>We value your feedback. Please let us know how we can improve our services.</p>
+                <form action="submit-feedback.php" method="post">
+                    <div class="form-group">
+                        <label for="feedback">Your Feedback:</label>
+                        <textarea class="form-control" id="feedback" name="feedback" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
